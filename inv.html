@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pip Boy</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm">
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">STAT</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">INV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">DATA</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">MAP</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">RADIO</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a href="#weapons" class="nav-link active" data-toggle="tab" >WEAPONS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#armor" class="nav-link" data-toggle="tab">ARMOR</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#aid" class="nav-link" data-toggle="tab">AID</a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+    </div>
+
+    <div class="tab-content">
+        <div class="tab-pane show active" id="weapons">
+            <div class="container item-list">
+                <ul>
+                    <li><a href="#" id=".44_pistol" class="active">.44 Pistol</a></li>
+                    <li><a href="#" id="10mmpistol" >10mm Pistol</a></li>
+                    <li><a href="#" id="assaultrifle">Assault Rifle</a></li>
+                </ul>
+            </div>
+            <div class="container item-stat">
+                <div class="row">
+                    <div class="col-8">Damage</div>
+                    <div class="col-4" id="damage"></div>
+                </div>
+                <div class="row">
+                    <div class="col-8">Fire rate</div>
+                    <div class="col-4" id='fire_rate'></div>
+                </div>
+                <div class="row">
+                    <div class="col-8">Range</div>
+                    <div class="col-4" id='range'></div>
+                </div>
+                <div class="row">
+                    <div class="col-8">Accuracy</div>
+                    <div class="col-4" id='accuracy'></div>
+                </div>
+                <div class="row">
+                    <div class="col-8">Weight</div>
+                    <div class="col-4" id='weight'></div>
+                </div>
+                <div class="row">
+                    <div class="col-8">Value</div>
+                    <div class="col-4" id="value"></div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane " id="armor"></div>
+        <div class="tab-pane" id="aid"></div>
+    </div>
+
+    <div class="container pip-footer">
+        <div class="row">
+            <div class="col-3">HP 100/100</div>
+            <span class="col-6">LEVEL 1
+                <div class="level-progress-bar">
+                    <div class="level-progress"></div>
+                </div>
+            </span> 
+            <div class="col-3 text-right">AP 50/50</div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        $(document).ready(()=>{
+        });
+    </script>
+</body>
+</html>
