@@ -1,0 +1,281 @@
+@font-face {
+  font-family: monofonto;
+  src: url("res/monofonto.ttf");
+}
+
+body *,
+body,
+.nav-tabs .nav-link.active {
+  color: #14fe17;
+  background: #272b23;
+  background-color: #272b23;
+  font-family: monofonto, sans-serif;
+}
+
+body::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  background: repeating-linear-gradient(0deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.2),
+      transparent 2px);
+  opacity: 0.3;
+  z-index: 100000;
+  pointer-events: none;
+}
+
+.navbar {
+  border-bottom: 2px solid;
+  margin: 10px 50px;
+}
+
+.navbar-nav {
+  width: 100%;
+}
+
+.navbar-nav>.nav-item {
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  line-height: 22px;
+  letter-spacing: 5px;
+}
+
+.nav-item.active::before {
+  display: block;
+  content: "";
+  position: absolute;
+  background: #272b23;
+  width: calc(20% - 7px);
+  height: 29px;
+  top: 27px;
+  border-left: 2px solid #14fe17;
+  border-top: 2px solid #14fe17;
+  border-right: 2px solid #14fe17;
+}
+
+.navbar::after,
+.navbar::before {
+  height: 7px;
+  width: 2px;
+  content: "";
+  position: absolute;
+  display: block;
+  background: #14fe17;
+  bottom: -8px;
+}
+
+.navbar::after {
+  right: 0px;
+}
+
+.navbar::before {
+  left: 0px;
+}
+
+.navbar-nav .nav-link {
+  display: inline-block;
+  padding: 8px calc(20% - 10px) !important;
+  z-index: 50;
+  position: relative;
+  border: 0px !important;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link,
+.nav-link:hover {
+  border: 0px solid transparent;
+  color: #14fe17;
+}
+
+.nav-tabs li:nth-child(2) {
+  opacity: 0.4;
+}
+
+.nav-tabs li:nth-child(3) {
+  opacity: 0.2;
+}
+
+.nav-tabs>.nav-item {
+  font-size: 24px;
+}
+
+.nav-tabs .nav-link.active {
+  border: none;
+}
+
+.nav-tabs {
+  border-bottom: 0px;
+}
+
+/* ----- STATUS ----- */
+.pip-progress>.row {
+  margin-top: 40px;
+}
+
+.pip-progress .col-3,
+.pip-progress .col-6 {
+  text-align: center;
+}
+
+.pip-progress .level-progress-bar {
+  width: 50px;
+}
+
+.vault-boy {
+  max-height: 200px;
+  position: relative;
+  margin: auto;
+  display: block;
+  filter: grayscale(1) sepia(1) hue-rotate(55deg) saturate(7) brightness(1) contrast(10);
+}
+
+.status-bar {
+  display: block;
+  margin-left: 20%;
+}
+
+.status-bar .row {
+  margin-bottom: 20px;
+}
+
+#special .level-progress-bar {
+  width: 50px;
+  margin: 30px auto;
+}
+
+#special .vault-boy {
+  position: absolute;
+  margin: auto calc(50% - 66px);
+  z-index: 50;
+  margin-top: 70px;
+}
+
+.pip-footer {
+  position: fixed;
+  bottom: 0;
+  max-width: calc(100% - 20px);
+  margin: 10px;
+}
+
+.level-progress-bar {
+  display: inline-block;
+  width: 70%;
+  height: 10px;
+  border: 2px solid;
+}
+
+.pip-footer .col-3,
+.pip-footer .col-6 {
+  background: rgba(16, 255, 0, 0.15);
+  font-size: 22px;
+  padding: 5px 10px;
+}
+
+.pip-footer .col-6 {
+  margin: 1px 5px;
+  flex: 0 0 calc(50% - 10px);
+}
+
+.pip-footer .level-progress-bar {
+  height: 20px;
+}
+
+.level-progress {
+  position: relative;
+  width: 70%;
+  height: 100%;
+  background: #14fe17;
+}
+
+.col-4 {
+  display: block;
+}
+
+#perks {
+  margin-top: -50px;
+}
+
+#perks .container {
+  width: 60%;
+}
+
+#perks .container>div {
+  display: flex;
+  flex-direction: row;
+  margin: 80px;
+}
+
+#perks .container>div>div {
+  width: 33%;
+}
+
+#perks .vault-boy {
+  position: absolute;
+  margin: 20px calc(50% - 70px);
+  z-index: 50;
+  margin-top: 40px;
+}
+
+#perks .level-progress-bar {
+  display: block;
+  width: 50px;
+  margin: auto;
+}
+
+/* ----- INVENTORY ----- */
+.container.item-list ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.container.item-list li a {
+  display: block;
+  list-style: none;
+  width: 50%;
+  padding: 5px 10px;
+  padding-left: 25px;
+}
+
+.container.item-list a.active::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #14fe17;
+  margin-top: 7px;
+  margin-left: -17px;
+}
+
+.container.item-list a.active:hover::before {
+  background: #272b23;
+}
+
+.container.item-list li a:hover {
+  display: block;
+  color: #272b23;
+  background-color: #14fe17;
+  text-decoration: none;
+}
+
+.container.item-stat {
+  position: absolute;
+  width: 25%;
+  bottom: 100px;
+  right: 30px;
+}
+
+.container.item-stat .col-4 {
+  text-align: right;
+}
+
+.container.item-stat * {
+  background: rgba(16, 255, 0, 0.15) !important;
+  margin-bottom: 3px;
+}
